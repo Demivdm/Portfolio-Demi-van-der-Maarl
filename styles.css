@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  line-height: 28px;
+  font-family: 'Nova Slim', cursive;
+  background-color: var(--main-beige);
+  color: var(--main-brown);
+}
+
+:root{
+    /* colors */
+    --main-beige:#FFF6ED;
+    --main-orange:#F1A96D;
+    --main-brown:#422D26;
+    /* font sizes */
+    --header-size-mobile:24px;
+    --header-size-desktop:48px;
+    --p-size-mobile:18px;
+    --p-size-desktop:20px;
+}
+
+.logo {
+  top: 0.20em;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  padding: 1em;
+  font-size: var(--header-size-mobile);
+  color: var(--main-brown);
+  
+  
+}
+svg{
+    cursor: pointer;
+}
+
+.menu li:hover {
+  color: var(--main-orange);
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+ 
+}
+.menu > li{
+    padding: .5em;
+}
+/*Container for menu button  */
+.menu-button-container {
+  display: flex;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/*  Creating the menu button */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: var(--main-orange);
+  position: absolute;
+  height: 4px;
+  width: 32px;
+  border-radius: 3px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+.nav-bar-bottom-lines {
+  width: 100%;
+  margin-bottom: 0.1em;
+  height: 1px;
+  background-color: var(--main-brown);
+}
+
+/*  Adding Functionality to the Hamburger Menu with CSS  */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  /*  transforms the hamburger icon into a cross  */
+  transform: rotate(-45deg);
+}
+
+/* Hiding the menu by default */
+.menu{
+    display: none;
+}
+/* Displaying the menu when the checkbox is checked */
+#menu-toggle:checked + .menu-button-container + .menu {
+  position: absolute;
+  display: block;
+  top: 1.6em;
+  right: 1em;
+  background-color: orange;
+ padding: 1em 1em 1em 1em;
+}
+
+/* media query for desktop */
+@media (min-width: 700px) {
+  .menu-button-container {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+   
+  }
+
+  .menu > li {
+    list-style-type: none;
+    padding: .5em;
+  }
+
+  .menu > li:not(:last-child) {
+    border-bottom: none;
+    margin-right: 1rem;
+  }
+}
