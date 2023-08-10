@@ -15,6 +15,7 @@ body {
     /* colors */
     --main-beige:#FFF6ED;
     --main-orange:#F1A96D;
+    --secondary-orange:orange;
     --main-brown:#422D26;
     /* font sizes */
     --header-size-mobile:24px;
@@ -45,7 +46,7 @@ svg{
 }
 
 .menu li:hover {
-  color: var(--main-orange);
+  color: var(--secondary-orange);
   cursor: pointer;
 }
 
@@ -152,4 +153,66 @@ svg{
     border-bottom: none;
     margin-right: 1rem;
   }
+}
+/* end nav */
+
+.introduction{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.introduction > img{
+  height: 20em;
+  border-radius: 45% 45% 0 0;
+  top: 1em;
+  position: relative;
+  box-shadow: 5px 5px 20px 5px #ccc;
+}
+
+.about{
+  background-color: var(--main-orange);
+  width: 18em;
+  z-index: 1;
+  padding: 1em;
+ 
+}
+.about > button{
+  background-color: var(--main-beige);
+  border: 0;
+  padding: .5em;
+  width:6.9em;
+  font-family: 'Nova Slim', cursive;
+  font-size: var(--p-size-mobile);
+}
+/* media query desktop */
+
+@media (min-width: 700px) {
+
+  .introduction{
+    flex-direction: row;
+    
+    position: relative;
+    top: 1em;
+    left: 10%;
+  }
+  .introduction > img{
+    height: 30em;
+  }
+
+  .about{
+  width: 25em;
+  position: absolute;
+  top: 9em;
+  left: 15em;
+  }
+}
+
+/* secondary for big big screens */
+
+@media (min-width: 1000px) {
+
+  .introduction{
+    left: 30%;
+  }
+
 }
