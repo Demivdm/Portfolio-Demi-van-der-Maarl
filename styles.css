@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   margin: 0;
+  padding: 0;
   height: 100%;
   line-height: 28px;
   font-family: 'Nova Slim', cursive;
@@ -218,4 +219,9 @@ svg{
     left: 30%;
   }
 
+}
+
+/* footer */
+footer{
+  height: 1em;
 }
