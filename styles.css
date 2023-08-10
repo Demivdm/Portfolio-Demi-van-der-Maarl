@@ -9,6 +9,7 @@ body {
   font-family: 'Nova Slim', cursive;
   background-color: var(--main-beige);
   color: var(--main-brown);
+  overflow-x: hidden;
 }
 
 :root{
@@ -38,7 +39,8 @@ body {
   padding: 1em;
   font-size: var(--header-size-mobile);
   color: var(--main-brown);
-  
+  z-index: 1;
+  position: sticky;
   
 }
 svg{
@@ -53,6 +55,7 @@ svg{
 .menu {
   display: flex;
   list-style-type: none;
+  z-index: 1;
  
 }
 .menu > li{
