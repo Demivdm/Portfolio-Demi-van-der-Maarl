@@ -44,7 +44,7 @@ body, html {
   position: sticky;
   
 }
-svg{
+.nav svg{
     cursor: pointer;
 }
 
@@ -167,7 +167,7 @@ svg{
 }
 .introduction > img{
   height: 20em;
-  border-radius: 45% 45% 0 0;
+  border-radius: 100px 100px 0 0;
   top: 1em;
   position: relative;
   box-shadow: 5px 5px 20px 5px #ccc;
@@ -201,6 +201,7 @@ svg{
   }
   .introduction > img{
     height: 30em;
+    border-radius: 150px 150px 0 0;
   }
 
   .about{
@@ -221,7 +222,139 @@ svg{
 
 }
 
+/* timeline */
+
+h1{
+  padding: 1em;
+}
+
+.top-circle{
+  border-radius: 50%;
+  background-color: #F1A96D;
+  width: 10em;
+  height: 10em;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  top: 3em;
+ 
+}
+
+.timeline-root{
+  border-left: 1px solid var(--main-brown);
+  border-right: 1px solid var(--main-brown);
+  width: 5em;
+  position: relative;
+  top: 1.5em;
+  left: 2.5em;
+  height: 100%;
+  
+}
+
+.timeline-root li{
+  list-style-type: none;
+  padding: 1em;
+  position: relative;
+  left: -6em;
+  top: 3em;
+
+  
+}
+li > h2{
+  transform: rotate(-90deg);
+  background-color: var(--main-orange);
+  width: 9em;
+  margin-bottom: 5em;
+  padding:1em;
+  border-radius: 60%;
+  font-size: var(--p-size-mobile);
+  text-align: center;
+}
+
+.website-preview > h3{
+  border-bottom: 1px solid ;
+  padding-left: 3em;
+}
+
+.website-preview h3::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 100%;
+  top: 2.2em;
+}
+.website-preview{
+  position: absolute;
+  left: 8.5em;
+  width: 15em;
+  top: 1em;
+ 
+}
+.website-preview img{
+  position: relative;
+  height: 8em;
+  left: 1em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px 5px #ccc;
+ 
+
+}
+
+.website-preview a{
+  left: 2em;
+  top: -5em;
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: white;
+ z-index: -1;
+
+}
+
+.hover{
+  z-index: 1;
+}
+
+.overlay{
+  position: absolute;
+  display: block;
+  width: 16.3em;
+  height: 8em;
+  padding: 1em;
+  background-color: black;
+  opacity: .5;
+  border-radius: 10px;
+  z-index: 0;
+  left: 1em;
+}
+
+/* media query deskto0p */
+
+@media (min-width: 700px) {
+
+  .timeline{
+    top: -8em;
+    position: relative;
+  }
+
+}
+@media (min-width: 1000px) {
+
+  .timeline{
+    left: 19.5em;
+    top: -8em;
+    position: relative;
+  }
+
+}
+
 /* footer */
 footer{
   height: 1em;
+  margin-top: 5em;
+  position: relative;
 }
