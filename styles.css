@@ -304,32 +304,57 @@ li > h2{
 
 }
 
-.website-preview a{
-  left: 2em;
-  top: -5em;
-  position: relative;
-  display: flex;
-  text-decoration: none;
-  color: white;
- z-index: -1;
 
+
+
+
+
+.website-preview.visible {
+  display: block;
 }
 
-.hover{
+/* Add this to your existing CSS file */
+.website-preview .overlay {
+  display: none;
+  position: absolute;
+  width: 16.5em;
+  height: 8em;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  transition: opacity 0.3s;
+  left: 1em;
+  z-index: 0;
+}
+
+.website-preview:hover .overlay {
+  display: block;
+  opacity: 1;
   z-index: 1;
 }
 
-.overlay{
-  position: absolute;
+.website-preview .overlay a {
+ left: 1em;
+top: 4em;
+width: 9em;
   display: block;
-  width: 16.3em;
-  height: 8em;
-  padding: 1em;
-  background-color: black;
-  opacity: .5;
-  border-radius: 10px;
-  z-index: 0;
-  left: 1em;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  z-index: -1;
+}
+
+.overlay a:hover{
+  text-decoration: underline;
+}
+
+/* Hide all images by default */
+.timeline-root img {
+  display: none;
+}
+
+/* Show the first image by default */
+.timeline-root img.visible {
+  display: block;
 }
 
 /* media query deskto0p */
@@ -340,6 +365,11 @@ li > h2{
     top: -8em;
     position: relative;
   }
+  .timeline-root img {
+    display: block;
+  }
+
+
 
 }
 @media (min-width: 1000px) {
@@ -348,6 +378,33 @@ li > h2{
     left: 19.5em;
     top: -8em;
     position: relative;
+  }
+  .timeline-root li:nth-child(odd) .website-preview {
+    left: -15em;
+    right: auto;
+    
+  }
+  .timeline-root li:nth-child(odd) .website-preview h3{
+    padding-left: 0;
+    width:14.8em;
+   margin-right: 0;
+    left: 1em;
+    position: relative;
+   
+  }
+  .timeline-root li:nth-child(odd) .website-preview h3::after{
+    content: '';
+    display: none;
+  }
+  .timeline-root li:nth-child(odd) .website-preview h3::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    right: 100%;
+    top: 1.3em;
   }
 
 }
