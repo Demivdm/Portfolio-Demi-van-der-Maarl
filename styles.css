@@ -188,6 +188,13 @@ body, html {
   font-family: 'Nova Slim', cursive;
   font-size: var(--p-size-mobile);
 }
+
+.about >button:hover{
+  border: 2px solid #ff6600;
+  scale: 1.1;
+  margin-right: .2em;
+  margin-left: .2em;
+}
 /* media query desktop */
 
 @media (min-width: 700px) {

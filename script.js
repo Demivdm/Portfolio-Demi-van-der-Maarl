@@ -22,6 +22,7 @@ function lightenH2BackgroundColors() {
   
     h2Elements.forEach((h2, index) => {
       const initialBackgroundColor = window.getComputedStyle(h2).backgroundColor;
+    //    /d staat voor digits en /g staat voor global. in dit variabel zit initialbackgroundcolor en .match geeft aan wat er gematcht moet worden?
       const rgbValues = initialBackgroundColor.match(/\d+/g); // Extract RGB values
       if (rgbValues.length === 3) {
         const r = parseInt(rgbValues[0]);
