@@ -263,7 +263,7 @@ h1{
 }
 li > h2{
   transform: rotate(-90deg);
-  background-color: var(--main-orange);
+  background-color: #ff6600;
   width: 9em;
   margin-bottom: 5em;
   padding:1em;
@@ -375,7 +375,7 @@ width: 9em;
 @media (min-width: 1000px) {
 
   .timeline{
-    left: 19.5em;
+    left: 25em;
     top: -8em;
     position: relative;
   }
