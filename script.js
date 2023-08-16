@@ -1,20 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const previewHeaders = document.querySelectorAll(".website-preview h3");
-    const imgElements = document.querySelectorAll(".timeline-root img");
-  
-    // Show the first image by default
-    imgElements[0].classList.add("visible");
-  
-    previewHeaders.forEach((h3, index) => {
-      h3.addEventListener("click", function () {
-        // Hide all images
-        imgElements.forEach((img) => img.classList.remove("visible"));
-  
-        // Show the corresponding image
-        imgElements[index].classList.add("visible");
-      });
+  const previewHeaders = document.querySelectorAll(".website-preview h3");
+  const imgElements = document.querySelectorAll(".timeline-root img");
+  const overlays = document.querySelectorAll(".website-preview .overlay"); // Select all overlays
+
+  // Show the first image and overlay by default
+  imgElements[0].classList.add("visible");
+  overlays[0].classList.add("visible");
+
+  previewHeaders.forEach((h3, index) => {
+    h3.addEventListener("click", function () {
+      // Hide all images and overlays
+      imgElements.forEach((img) => img.classList.remove("visible"));
+      overlays.forEach((overlay) => overlay.classList.remove("visible"));
+
+      // Show the corresponding image and overlay
+      imgElements[index].classList.add("visible");
+      overlays[index].classList.add("visible");
     });
   });
+});
   
   // JavaScript code to make the background color of h2 elements lighter
 function lightenH2BackgroundColors() {

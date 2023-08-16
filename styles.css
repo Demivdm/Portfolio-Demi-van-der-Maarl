@@ -187,6 +187,7 @@ body, html {
   width:6.9em;
   font-family: 'Nova Slim', cursive;
   font-size: var(--p-size-mobile);
+  color: var(--main-brown);
 }
 
 .about >button:hover{
@@ -194,6 +195,7 @@ body, html {
   scale: 1.1;
   margin-right: .2em;
   margin-left: .2em;
+  margin: .4em;
 }
 /* media query desktop */
 
@@ -265,6 +267,7 @@ h1{
   position: relative;
   left: -6em;
   top: 3em;
+  color: var(--main-brown);
 
   
 }
@@ -304,6 +307,7 @@ li > h2{
 .website-preview img{
   position: relative;
   height: 8em;
+  width: 100%;
   left: 1em;
   border-radius: 10px;
   box-shadow: 5px 5px 20px 5px #ccc;
@@ -312,47 +316,33 @@ li > h2{
 }
 
 
+.overlay{
+  z-index: 1;
+  background-color: var(--main-orange);
+  position: absolute;
+  left: 1em;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  padding: .2em .2em .5em 1em;
+  top: 10em;
+  display: none;
+  
+}
 
-
-
-
+.overlay a{
+  color: var(--main-brown);
+  font-size: .90em;
+}
 .website-preview.visible {
   display: block;
 }
 
+.overlay.visible{
+  display: block;
+}
+
 /* Add this to your existing CSS file */
-.website-preview .overlay {
-  display: none;
-  position: absolute;
-  width: 16.5em;
-  height: 8em;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  transition: opacity 0.3s;
-  left: 1em;
-  z-index: 0;
-}
 
-.website-preview:hover .overlay {
-  display: block;
-  opacity: 1;
-  z-index: 1;
-}
-
-.website-preview .overlay a {
- left: 1em;
-top: 4em;
-width: 9em;
-  display: block;
-  color: white;
-  text-decoration: none;
-  position: relative;
-  z-index: -1;
-}
-
-.overlay a:hover{
-  text-decoration: underline;
-}
 
 /* Hide all images by default */
 .timeline-root img {
@@ -375,7 +365,43 @@ width: 9em;
   .timeline-root img {
     display: block;
   }
+  .website-preview .overlay {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 8em;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    transition: opacity 0.3s;
+    left: 1em;
+    top: 4em;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
 
+  }
+  
+  .website-preview:hover .overlay {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .website-preview .overlay a {
+   left: 1em;
+  top: 4em;
+  width: 9em;
+    display: block;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: -1;
+   
+  }
+  
+  .overlay a:hover{
+    text-decoration: underline;
+  }
 
 
 }
