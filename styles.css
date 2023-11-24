@@ -337,26 +337,10 @@ li > h2{
   color: var(--main-brown);
   font-size: .90em;
 }
-.website-preview.visible {
-  display: block;
-}
-
-.overlay.visible{
-  display: block;
-}
-
-/* Add this to your existing CSS file */
 
 
-/* Hide all images by default */
-.timeline-root img {
-  display: none;
-}
 
-/* Show the first image by default */
-.timeline-root img.visible {
-  display: block;
-}
+
 
 /* media query deskto0p */
 
@@ -453,6 +437,7 @@ li > h2{
 
 .prints-intro{
   margin: 3em 1em 1em 2em;
+  padding-top: 5em;
 }
 
 .img-3d{
