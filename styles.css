@@ -11,6 +11,7 @@ body, html {
   background-color: var(--main-beige);
   color: var(--main-brown);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 :root{
@@ -184,7 +185,7 @@ body, html {
   padding: 1em;
  
 }
-.about > button{
+.about > a{
   background-color: var(--main-beige);
   border: 0;
   padding: .5em;
@@ -192,9 +193,10 @@ body, html {
   font-family: 'Nova Slim', cursive;
   font-size: var(--p-size-mobile);
   color: var(--main-brown);
+  text-decoration: none;
 }
 
-.about >button:hover{
+.about >a:hover{
   border: 2px solid #ff6600;
   scale: 1.1;
   margin-right: .2em;
