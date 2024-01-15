@@ -1,3 +1,3 @@
 # Portfolio
 
-![image](https://github.com/Demivdm/Portfolio-Demi-van-der-Maarl/assets/112861166/8d84279b-5414-4711-b44e-477221327695)
+![mockup-portfolio](https://github.com/Demivdm/Portfolio-Demi-van-der-Maarl/assets/112861166/c0ae85a6-4b01-4be8-a0d7-a6e6a94106a5)
